@@ -35,47 +35,28 @@ body{
   position:relative;
 }
 
-/* Background LED Scanning Laser Effect */
 body::before {
   content: "";
   position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 45%,
-    rgba(176, 102, 255, 0.04) 50%,
-    transparent 55%
-  );
+  top: -50%; left: -50%; width: 200%; height: 200%;
+  background: linear-gradient(45deg, transparent 45%, rgba(176, 102, 255, 0.04) 50%, transparent 55%);
   background-size: 60px 60px;
   animation: laserScan 12s linear infinite;
   pointer-events: none;
   z-index: 1;
 }
-
 @keyframes laserScan {
   0% { transform: translateY(0) rotate(0deg); }
   100% { transform: translateY(50px) rotate(360deg); }
 }
 
-.en, h1, h2, .btn, .product-name, .price, footer, label {
-  font-family: var(--font-en);
-}
+.en, h1, h2, .btn, .product-name, .price, footer, label { font-family: var(--font-en); }
 
-/* ZL Logo Header with LED Glow */
 .zl-brand-logo{
-  width:52px;
-  height:52px;
-  background:#000;
-  border:1.5px solid rgba(176,102,255,0.4);
-  border-radius:14px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  box-shadow: 0 0 25px rgba(176,102,255,0.4), inset 0 0 10px rgba(124,58,237,0.3);
+  width:52px; height:52px; background:#000;
+  border:1.5px solid rgba(176,102,255,0.4); border-radius:14px;
+  display:flex; align-items:center; justify-content:center;
+  position:relative; box-shadow: 0 0 25px rgba(176,102,255,0.4), inset 0 0 10px rgba(124,58,237,0.3);
   animation: logoPulse 3s infinite alternate;
 }
 @keyframes logoPulse {
@@ -83,168 +64,127 @@ body::before {
   100% { box-shadow: 0 0 35px rgba(176,102,255,0.7), inset 0 0 15px rgba(176,102,255,0.5); }
 }
 .zl-brand-logo::before {
-  content: "PEUF";
-  position: absolute;
-  top: -9px;
-  right: -4px;
-  font-size: 8px;
-  font-family: var(--font-en);
-  font-weight: 900;
-  color: var(--accent);
-  letter-spacing: 2px;
-  opacity: 0.9;
+  content: "PEUF"; position: absolute; top: -9px; right: -4px;
+  font-size: 8px; font-weight: 900; color: var(--accent); letter-spacing: 2px;
   text-shadow: 0 0 8px var(--accent);
 }
-.zl-text {
-  font-size: 24px;
-  font-weight: 900;
-  color: #fff;
-  letter-spacing: -1.5px;
-  text-shadow: 0 0 10px rgba(255,255,255,0.6);
-}
+.zl-text { font-size: 24px; font-weight: 900; color: #fff; letter-spacing: -1.5px; text-shadow: 0 0 10px rgba(255,255,255,0.6); }
 
-/* Welcome Modal */
 #welcomeModal{
-  position:fixed;
-  inset:0;
-  background:rgba(2,2,3,0.96);
-  backdrop-filter:blur(25px);
-  z-index:9999;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  position:fixed; inset:0; background:rgba(2,2,3,0.96); backdrop-filter:blur(25px); z-index:9999;
+  display:flex; align-items:center; justify-content:center;
 }
 #welcomeModal.hide{opacity:0;visibility:hidden;pointer-events:none}
 .modal-content{
-  text-align:center;
-  max-width:380px;
-  width:90%;
-  animation:popIn .6s ease;
+  text-align:center; max-width:380px; width:90%;
   background:linear-gradient(135deg, rgba(15,11,26,0.95), rgba(5,6,8,0.98));
-  border:1px solid rgba(176,102,255,0.3);
-  border-radius:30px;
-  padding:40px 30px;
-  box-shadow: 0 0 60px rgba(124,58,237,0.5), inset 0 0 20px rgba(176,102,255,0.2);
+  border:1px solid rgba(176,102,255,0.3); border-radius:30px; padding:40px 30px;
+  box-shadow: 0 0 60px rgba(124,58,237,0.5);
 }
-@keyframes popIn{from{transform:scale(0.9);opacity:0}to{transform:scale(1);opacity:1}}
 .modal-logo-zl{
-  width:100px;
-  height:100px;
-  background:#000;
-  border:2px solid rgba(176,102,255,0.5);
-  border-radius:24px;
-  margin:0 auto 24px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  width:100px; height:100px; background:#000; border:2px solid rgba(176,102,255,0.5);
+  border-radius:24px; margin:0 auto 24px; display:flex; align-items:center; justify-content:center;
   box-shadow:0 0 40px rgba(176,102,255,0.6);
 }
-.modal-logo-zl span{font-size:48px;font-weight:900;color:#fff;letter-spacing:-2px;text-shadow:0 0 15px #b066ff}
+.modal-logo-zl span{font-size:48px;font-weight:900;color:#fff;text-shadow:0 0 15px #b066ff}
 
-/* Header */
 header{
-  position:sticky;
-  top:0;
-  background:rgba(2,2,3,0.88);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid rgba(176,102,255,0.15);
-  z-index:100;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  position:sticky; top:0; background:rgba(2,2,3,0.88); backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(176,102,255,0.15); z-index:100; box-shadow: 0 4px 30px rgba(0,0,0,0.5);
 }
-.nav{
-  max-width:1200px;
-  margin:0 auto;
-  padding:12px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
+.nav{ max-width:1200px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; }
 .brand{display:flex;align-items:center;gap:14px;cursor:pointer}
 .brand h1{margin:0;font-size:22px;font-weight:900;color:#fff;text-shadow:0 0 10px rgba(176,102,255,0.4)}
-
 nav{display:flex;align-items:center;gap:15px}
 nav a{color:var(--text);text-decoration:none;font-size:14px;font-weight:600;opacity:.85}
 nav a:hover{opacity:1;color:var(--accent);text-shadow:0 0 10px var(--accent)}
 
-/* Hero Section */
-.hero{
-  max-width:1200px;
-  margin:50px auto 40px;
-  padding:0 20px;
-  text-align:center;
-  position:relative;
-  z-index:2;
-}
+.hero{ max-width:1200px; margin:50px auto 40px; padding:0 20px; text-align:center; position:relative; z-index:2; }
 .hero h2{font-size:46px;font-weight:900;margin:0 0 10px;color:#fff;text-shadow:0 0 20px rgba(176,102,255,0.3)}
 .hero p{font-size:18px;color:var(--muted);max-width:600px;margin:0 auto 25px}
 
 .original-badge{
-  display:inline-flex;
-  padding:8px 20px;
-  background:rgba(37,211,102,0.12);
-  color:#25D366;
-  border-radius:99px;
-  font-weight:800;
-  font-size:15px;
-  margin-bottom:20px;
-  border:1px solid rgba(37,211,102,0.3);
-  box-shadow: 0 0 20px rgba(37,211,102,0.2);
+  display:inline-flex; padding:8px 20px; background:rgba(37,211,102,0.12); color:#25D366;
+  border-radius:99px; font-weight:800; font-size:15px; margin-bottom:20px;
+  border:1px solid rgba(37,211,102,0.3); box-shadow: 0 0 20px rgba(37,211,102,0.2);
 }
 
-/* Products Section */
 .section{max-width:1200px;margin:50px auto;padding:0 20px;position:relative;z-index:2}
 .products{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:30px}
 
 .product{
-  background:var(--card);
-  border-radius:28px;
-  border:1px solid rgba(176,102,255,0.15);
-  overflow:hidden;
-  position:relative;
-  display:flex;
-  flex-direction:column;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  background:var(--card); border-radius:28px; border:1px solid rgba(176,102,255,0.15);
+  overflow:hidden; position:relative; display:flex; flex-direction:column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-.product:hover{
-  border-color:rgba(176,102,255,0.5);
-  transform:translateY(-8px);
-  box-shadow:0 20px 60px rgba(124,58,237,0.35);
-}
-
-/* LED Glow Behind Product Cards & Images */
+.product:hover{ border-color:rgba(176,102,255,0.5); transform:translateY(-8px); box-shadow:0 20px 60px rgba(124,58,237,0.35); }
 .product::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  opacity: 0.8;
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: 0.8;
 }
 
-.product-img-wrapper {
+/* Slider for CUBA Flavors */
+.slider-container {
   position: relative;
+  width: 100%;
+  height: 280px;
   overflow: hidden;
+  background: #000;
   cursor: zoom-in;
 }
-.product img{
-  width:100%;
-  height:280px;
-  object-fit:cover;
-  filter:contrast(1.06) brightness(1.06);
+.slider-track {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
 }
-.product:hover img{transform:scale(1.03)}
-.zoom-hint {
+.slide-img {
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: 1px solid rgba(176,102,255,0.4);
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: grid; place-items:center;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 16px;
+  font-weight: bold;
+}
+.slider-btn:hover { background: var(--accent); color: #000; }
+.slider-prev { right: 10px; }
+.slider-next { left: 10px; }
+
+.slider-dots {
   position: absolute;
   bottom: 10px;
-  left: 10px;
-  background: rgba(0,0,0,0.8);
-  color: #fff;
-  padding: 5px 12px;
-  border-radius: 8px;
-  font-size: 11px;
-  font-weight: 700;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(176,102,255,0.3);
-  box-shadow: 0 0 10px rgba(176,102,255,0.3);
+  left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  z-index: 10;
+}
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+}
+.dot.active { background: var(--accent); width: 20px; border-radius: 4px; }
+
+.product-img-wrapper { position: relative; overflow: hidden; cursor: zoom-in; }
+.product img{ width:100%; height:280px; object-fit:cover; filter:contrast(1.06) brightness(1.06); }
+.zoom-hint {
+  position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.8); color: #fff;
+  padding: 5px 12px; border-radius: 8px; font-size: 11px; font-weight: 700; backdrop-filter: blur(5px);
+  border: 1px solid rgba(176,102,255,0.3); box-shadow: 0 0 10px rgba(176,102,255,0.3);
 }
 
 .pbody{padding:24px;text-align:right;display:flex;flex-direction:column;flex:1}
@@ -252,124 +192,53 @@ nav a:hover{opacity:1;color:var(--accent);text-shadow:0 0 10px var(--accent)}
 .product-desc{font-size:14px;color:var(--muted);margin-bottom:15px;line-height:1.5}
 .price{font-size:20px;font-weight:900;color:var(--accent);margin-bottom:15px;text-shadow:0 0 10px rgba(176,102,255,0.4)}
 
-/* Order Buttons with LED Glow */
 .order-group{display:flex;flex-direction:column;gap:10px;margin-top:auto}
 .btn-choice{
-  width:100%;
-  padding:12px;
-  border-radius:14px;
-  font-weight:800;
-  font-family:var(--font-en);
-  text-decoration:none;
-  text-align:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  cursor:pointer;
-  font-size:14px;
-  letter-spacing:1px;
-  position:relative;
+  width:100%; padding:12px; border-radius:14px; font-weight:800; font-family:var(--font-en);
+  text-decoration:none; text-align:center; display:flex; align-items:center; justify-content:center;
+  gap:8px; cursor:pointer; font-size:14px; letter-spacing:1px; position:relative;
 }
 .btn-gros{
-  background:rgba(255,255,255,0.02);
-  border:1.5px solid rgba(176,102,255,0.3);
-  color:#fff;
+  background:rgba(255,255,255,0.02); border:1.5px solid rgba(176,102,255,0.3); color:#fff;
   box-shadow: 0 0 15px rgba(176,102,255,0.15);
 }
 .btn-gros:hover{background:var(--accent);color:#000;border-color:var(--accent);box-shadow: 0 0 25px var(--accent)}
 .btn-detail{
-  background:linear-gradient(135deg, var(--accent), var(--accent2));
-  color:#fff;
-  border:none;
+  background:linear-gradient(135deg, var(--accent), var(--accent2)); color:#fff; border:none;
   box-shadow: 0 0 20px rgba(176,102,255,0.4);
 }
 .btn-detail:hover{filter:brightness(1.15);box-shadow: 0 0 30px rgba(176,102,255,0.7)}
 
-/* WhatsApp Main Button with LED Glow */
 .whatsapp-main{
-  background:var(--whatsapp);
-  color:#fff;
-  padding:16px 32px;
-  border-radius:18px;
-  font-weight:900;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  gap:12px;
-  font-size:18px;
-  box-shadow:0 0 30px rgba(37,211,102,0.4);
-  border:none;
-  cursor:pointer;
+  background:var(--whatsapp); color:#fff; padding:16px 32px; border-radius:18px; font-weight:900;
+  text-decoration:none; display:inline-flex; align-items:center; gap:12px; font-size:18px;
+  box-shadow:0 0 30px rgba(37,211,102,0.4); border:none; cursor:pointer;
 }
-.whatsapp-main:hover{
-  box-shadow:0 0 45px rgba(37,211,102,0.7);
-  transform:translateY(-2px);
-}
+.whatsapp-main:hover{ box-shadow:0 0 45px rgba(37,211,102,0.7); transform:translateY(-2px); }
 
-/* Image Zoom Modal */
 #zoomModal {
-  position: fixed;
-  inset: 0;
-  background: rgba(2,2,3,0.96);
-  backdrop-filter: blur(20px);
-  z-index: 10000;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  cursor: zoom-out;
+  position: fixed; inset: 0; background: rgba(2,2,3,0.96); backdrop-filter:blur(20px);
+  z-index: 10000; display: none; align-items: center; justify-content: center; cursor: zoom-out;
 }
 #zoomModal img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 20px;
-  box-shadow: 0 0 60px rgba(176,102,255,0.5);
-  border: 1px solid rgba(176,102,255,0.3);
+  max-width: 90%; max-height: 90%; border-radius: 20px;
+  box-shadow: 0 0 60px rgba(176,102,255,0.5); border: 1px solid rgba(176,102,255,0.3);
 }
 
-/* Order Form */
 .form-card {
-  background: var(--card);
-  border: 1px solid rgba(176,102,255,0.25);
-  border-radius: 28px;
-  padding: 35px;
-  max-width: 650px;
-  margin: 0 auto;
-  box-shadow: 0 15px 50px rgba(0,0,0,0.6), 0 0 30px rgba(124,58,237,0.2);
+  background: var(--card); border: 1px solid rgba(176,102,255,0.25); border-radius: 28px;
+  padding: 35px; max-width: 650px; margin: 0 auto; box-shadow: 0 15px 50px rgba(0,0,0,0.6);
 }
-.form-title {
-  font-size: 24px;
-  font-weight: 800;
-  margin-bottom: 25px;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(176,102,255,0.4);
-}
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  text-align: right;
-}
+.form-title { font-size: 24px; font-weight: 800; margin-bottom: 25px; text-align: center; color: #fff; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { display: flex; flex-direction: column; gap: 8px; text-align: right; }
 .form-group.full { grid-column: span 2; }
 .form-group label { font-size: 13px; color: var(--muted); font-weight: 700; }
 .form-control {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(176,102,255,0.2);
-  border-radius: 12px;
-  padding: 14px;
-  color: #fff;
-  font-family: var(--font-ar);
-  font-size: 15px;
-  outline: none;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(176,102,255,0.2); border-radius: 12px;
+  padding: 14px; color: #fff; font-family: var(--font-ar); font-size: 15px; outline: none;
 }
-.form-control:focus { border-color: var(--accent); box-shadow: 0 0 15px rgba(176,102,255,0.4), inset 0 0 10px rgba(0,0,0,0.5); }
+.form-control:focus { border-color: var(--accent); }
 select.form-control option { background: #111; color: #fff; }
 
 footer{padding:60px 0;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(176,102,255,0.15);position:relative;z-index:2}
@@ -384,17 +253,13 @@ footer{padding:60px 0;text-align:center;color:var(--muted);font-size:13px;border
 </head>
 <body>
 
-<!-- Zoom Overlay Modal -->
 <div id="zoomModal" onclick="closeZoom()">
   <img src="" id="zoomedImg">
 </div>
 
-<!-- Welcome Modal -->
 <div id="welcomeModal">
   <div class="modal-content">
-    <div class="modal-logo-zl">
-      <span>ZL</span>
-    </div>
+    <div class="modal-logo-zl"><span>ZL</span></div>
     <div style="font-family:var(--font-en);font-size:28px;font-weight:900;color:#fff;margin-bottom:8px;text-shadow:0 0 15px #b066ff">ZL PEUFS</div>
     <div style="color:var(--muted);font-size:14px;margin-bottom:30px">💎 100% ORIGINAL QUALITY ONLY 💎</div>
     <button class="whatsapp-main" style="width:100%;justify-content:center" onclick="dismissModal()">ENTRER / دخول</button>
@@ -404,9 +269,7 @@ footer{padding:60px 0;text-align:center;color:var(--muted);font-size:13px;border
 <header>
   <div class="nav">
     <div class="brand" onclick="window.location.href='#home'">
-      <div class="zl-brand-logo">
-        <span class="zl-text">ZL</span>
-      </div>
+      <div class="zl-brand-logo"><span class="zl-text">ZL</span></div>
       <div style="text-align:right">
         <h1 class="en">ZL PEUFS</h1>
         <div style="font-size:10px;color:var(--muted);font-weight:700;letter-spacing:1px">ORIGINAL STORE</div>
@@ -426,14 +289,13 @@ footer{padding:60px 0;text-align:center;color:var(--muted);font-size:13px;border
   <a href="#orderForm" class="whatsapp-main en">FILL ORDER FORM / عمّر معلومات الطلب</a>
 </section>
 
-<!-- Products Section -->
 <section class="section">
   <div class="products">
 
-    <!-- RandM Pro Tornado 120K (BOTH: Détail & Gros) -->
+    <!-- RandM Pro Tornado 120K -->
     <div class="product">
       <div class="product-img-wrapper" onclick="openZoom('peuf torando 120k 4 gout.jpg')">
-        <img src="peuf torando 120k 4 gout.jpg" alt="RandM Pro Tornado 120K">
+        <img src="peuf torando 120k 4 gout.jpg" alt="RandM 120K">
         <span class="zoom-hint en">🔍 Zoom</span>
       </div>
       <div class="pbody">
@@ -447,16 +309,29 @@ footer{padding:60px 0;text-align:center;color:var(--muted);font-size:13px;border
       </div>
     </div>
 
-    <!-- CUBA Nicotine Pouches (BOTH: Détail & Gros) -->
+    <!-- CUBA Nicotine Pouches with Flavor Slider (4 Flavors) -->
     <div class="product">
-      <div class="product-img-wrapper" onclick="openZoom('cuba peufe.jpg')">
-        <img src="cuba peufe.jpg" alt="CUBA">
-        <span class="zoom-hint en">🔍 Zoom</span>
+      <div class="slider-container" id="cubaSlider">
+        <div class="slider-track" id="cubaTrack">
+          <img class="slide-img" src="cuba peufe.jpg" alt="Black Currant">
+          <img class="slide-img" src="cuba forest berries-cf3d6ff2.jpg" alt="Forest Berries">
+          <img class="slide-img" src="cuba peach.jpg" alt="Peach">
+          <img class="slide-img" src="cuba black currant-019ffc7a.jpg" alt="Black Currant 2">
+        </div>
+        <button class="slider-btn slider-prev" onclick="moveSlide(-1, event)">‹</button>
+        <button class="slider-btn slider-next" onclick="moveSlide(1, event)">›</button>
+        <div class="slider-dots" id="cubaDots">
+          <span class="dot active" onclick="currentSlide(0, event)"></span>
+          <span class="dot" onclick="currentSlide(1, event)"></span>
+          <span class="dot" onclick="currentSlide(2, event)"></span>
+          <span class="dot" onclick="currentSlide(3, event)"></span>
+        </div>
+        <span class="zoom-hint en" style="bottom:35px">◀ Swipe / Click 4 Flavors ▶</span>
       </div>
       <div class="pbody">
         <p class="product-name en">CUBA Nicotine Pouches</p>
         <p class="price">1,400 DA</p>
-        <p class="product-desc">Gouts: Black Currant (First), Forest Berries, Peach, Apple Juice. (Original)</p>
+        <p class="product-desc">Flavors: Black Currant, Forest Berries, Peach, Apple Juice. (Original)</p>
         <div class="order-group">
           <button class="btn-choice btn-detail" onclick="selectProduct('CUBA Nicotine Pouches', 'DÉTAIL')">DÉTAIL</button>
           <button class="btn-choice btn-gros" onclick="selectProduct('CUBA Nicotine Pouches', 'GROS')">GROS</button>
@@ -464,7 +339,7 @@ footer{padding:60px 0;text-align:center;color:var(--muted);font-size:13px;border
       </div>
     </div>
 
-    <!-- JNR Lila Kiss 60K (BOTH: Détail & Gros) -->
+    <!-- JNR Lila Kiss 60K -->
     <div class="product">
       <div class="product-img-wrapper" onclick="openZoom('peuf jnr 60k 4400da.jpg')">
         <img src="peuf jnr 60k 4400da.jpg" alt="JNR 60K">
@@ -481,7 +356,7 @@ footer{padding:60px 0;text-align:center;color:var(--muted);font-size:13px;border
       </div>
     </div>
 
-    <!-- JNR Lion King 30K (BOTH: Détail & Gros) -->
+    <!-- JNR Lion King 30K -->
     <div class="product">
       <div class="product-img-wrapper" onclick="openZoom('peufs.webp')">
         <img src="peufs.webp" alt="JNR Lion King">
@@ -498,7 +373,7 @@ footer{padding:60px 0;text-align:center;color:var(--muted);font-size:13px;border
       </div>
     </div>
 
-    <!-- Crown Bar 60K (BOTH: Détail & Gros) -->
+    <!-- Crown Bar 60K -->
     <div class="product">
       <div class="product-img-wrapper" onclick="openZoom('peuf crown bar 4800da.jpg')">
         <img src="peuf crown bar 4800da.jpg" alt="Crown Bar">
@@ -515,7 +390,7 @@ footer{padding:60px 0;text-align:center;color:var(--muted);font-size:13px;border
       </div>
     </div>
 
-    <!-- R&M Tornado 15K (BOTH: Détail & Gros) -->
+    <!-- R&M Tornado 15K -->
     <div class="product">
       <div class="product-img-wrapper" onclick="openZoom('peuf 15k 2500da.jpg')">
         <img src="peuf 15k 2500da.jpg" alt="R&M 15K">
@@ -532,7 +407,7 @@ footer{padding:60px 0;text-align:center;color:var(--muted);font-size:13px;border
       </div>
     </div>
 
-    <!-- VELO Freezing Peppermint (BOTH: Détail & Gros) -->
+    <!-- VELO Freezing Peppermint -->
     <div class="product">
       <div class="product-img-wrapper" onclick="openZoom('peuf velo 1400da.jpg')">
         <img src="peuf velo 1400da.jpg" alt="VELO">
@@ -568,7 +443,7 @@ footer{padding:60px 0;text-align:center;color:var(--muted);font-size:13px;border
         </div>
         <div class="form-group">
           <label>الولاية / Wilaya</label>
-          <input type="text" id="custWilaya" class="form-control" placeholder="Béجاية، الجزائر..." required>
+          <input type="text" id="custWilaya" class="form-control" placeholder="Béjaïa, Alger..." required>
         </div>
         <div class="form-group">
           <label>نوع الطلب / Type</label>
@@ -610,6 +485,30 @@ footer{padding:60px 0;text-align:center;color:var(--muted);font-size:13px;border
 </footer>
 
 <script>
+let currentSlideIndex = 0;
+const totalSlides = 4;
+
+function moveSlide(direction, event) {
+  event.stopPropagation();
+  currentSlideIndex = (currentSlideIndex + direction + totalSlides) % totalSlides;
+  updateSlider();
+}
+
+function currentSlide(index, event) {
+  event.stopPropagation();
+  currentSlideIndex = index;
+  updateSlider();
+}
+
+function updateSlider() {
+  const track = document.getElementById('cubaTrack');
+  const dots = document.querySelectorAll('#cubaDots .dot');
+  track.style.transform = `translateX(${currentSlideIndex * 25}%)`;
+  dots.forEach((dot, idx) => {
+    dot.classList.toggle('active', idx === currentSlideIndex);
+  });
+}
+
 function dismissModal(){
   document.getElementById('welcomeModal').classList.add('hide');
 }
@@ -630,7 +529,7 @@ function sendWhatsAppOrder(e){
   const name = document.getElementById('custName').value;
   const phone = document.getElementById('custPhone').value;
   const wilaya = document.getElementById('custWilaya').value;
-  const type = document.getElementById('custType').value;
+  const type = document.getElementById('custType',).value;
   const model = document.getElementById('custModel').value;
   const qty = document.getElementById('custQty').value;
   const flavor = document.getElementById('custFlavor').value || 'Default';
